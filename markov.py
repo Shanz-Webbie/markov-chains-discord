@@ -75,7 +75,6 @@ def discord_bot(filename):
     # if not filenames:
     #     print("Please provide a filename on the command line! Ex. python3 markov.py green-eggs.txt")
     #     exit(1)
-    text = open_and_read_file(filename)
+    text = open_and_read_file([filename])
     chains = make_chains(text)
-
     return make_text(chains)
